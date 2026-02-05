@@ -16,6 +16,9 @@ jobs:
         run: sudo apt update && sudo apt upgrade -y
       - name: check uptime
         run: uptime
-          
+
       - name: Build Docker image
         run: docker build -t hello-world-python .
+      
+      - name: install nginx
+        run: sudo apt install nginx
