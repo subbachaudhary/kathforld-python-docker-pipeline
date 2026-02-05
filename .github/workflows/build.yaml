@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+      
+      - name: update code
+        run: sudo apt update && sudo apt upgrade -y
+      - name: check uptime
+        run: uptime
+          
       - name: Build Docker image
         run: docker build -t hello-world-python .
